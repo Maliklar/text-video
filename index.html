@@ -14,15 +14,24 @@
       font-size: 10px;
       line-height: 10px;
       letter-spacing: -1px;
+      border: 5px black solid;
+      border-radius: 15px;
+      padding: 5px;
     }
 
     br {
       height: 0px;
       width: 0px;
     }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   </style>
   <body>
     <pre id="pre"></pre>
-    <button onclick="play()">Play</button>
+    <button id="playButton">Play</button>
   </body>
 </html>

@@ -8,7 +8,7 @@ const playButton = document.getElementById("playButton") as HTMLButtonElement;
 const context = canvas.getContext("2d");
 
 // Characters ordered based on their brightness (This one may need to change)
-const characters = `$@B%8&WM#*_+~i!lI;:,'.`.split("");
+const characters = `$@oahk-_+~i"^'.`.split("");
 characters.push("&nbsp;"); // Space entity
 
 let videoString = "";
@@ -16,7 +16,7 @@ let videoString = "";
 // Handle when video is playing
 video.onplay = () => {
   // Setting video resolution
-  const width = 120;
+  const width = 180;
   const height = 60;
 
   const frameCapture = () => {
@@ -59,10 +59,8 @@ video.onplay = () => {
   frameCapture();
 };
 
-video.onpause = () => {};
-
 // User clicks on play button
-async function play() {
+playButton.onclick = async () => {
   try {
     const stream = await navigator.mediaDevices.getUserMedia({
       video: true,
@@ -74,4 +72,4 @@ async function play() {
   setTimeout(() => {
     video.play();
   }, 1000);
-}
+};
