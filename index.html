@@ -1,13 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Webpack App</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
   </head>
+  <style>
+    * {
+      font-family: monospace;
+    }
+    pre {
+      font-family: "Courier New", "Courier", monospace;
+      font-size: 10px;
+      line-height: 10px;
+      letter-spacing: -1px;
+      border: 5px black solid;
+      border-radius: 15px;
+      padding: 5px;
+    }
+
+    br {
+      height: 0px;
+      width: 0px;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
   <body>
-    asdf
-    <script src="runtime.js"></script>
-    <script src="main.js"></script>
-  </body>
+    <pre id="pre"></pre>
+    <button id="playButton">Play</button>
+  <script src="runtime.js"></script><script src="main.js"></script></body>
 </html>
